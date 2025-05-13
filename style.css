@@ -1,0 +1,321 @@
+/* Google Fonts Import Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #c1f7f5;
+  padding-top: 80px;
+}
+
+body {
+  background: #c1f7f5;
+}
+#nav-links {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9); /* 50% transparent white */
+  padding: 20px 15px;
+  border-radius: 0;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+#nav-links li {
+  list-style: none;
+  margin: 0 12px;
+}
+#nav-links li a {
+  position: relative;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 0;
+  text-decoration: none;
+}
+#nav-links li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #34efdf;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+#nav-links li a:hover:before {
+  width: 100%;
+}
+#nav-links li#center a:before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+#nav-links li#upward a:before {
+  width: 100%;
+  bottom: -5px;
+  opacity: 0;
+}
+#nav-links li#upward a:hover:before {
+  bottom: 0px;
+  opacity: 1;
+}
+#nav-links li#forward a:before {
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+#nav-links li#forward a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/*hero section*/
+.hero {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50px;
+  margin: 40px auto;
+  padding: 40px;
+  width: 80%;
+  max-width: 1000px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*Carousel images*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  background-color: white;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  border-radius: 50px;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Review Section */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.header-sponser{
+  display: flex;
+  justify-content: center;
+}
+.slider-review {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+
+.slider-review::before,
+.slider-review::after {
+  content: "";
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider-review::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider-review::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track-review {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+}
+/*Footer*/
+
+/*preorder form*/
+.preorder-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 20px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title and subtitle */
+.preorder-section .title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.preorder-section .subtitle {
+  font-size: 1rem;
+  color: #555;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form input containers */
+.preorder-section .form-group {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 5px;
+}
+
+.preorder-section input[type="text"],
+.preorder-section input[type="email"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.preorder-section input:focus {
+  border-color: #08d;
+}
+
+/* Submit Button */
+.preorder-section .submit {
+  background-color: #1ccdbf;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.preorder-section .submit:hover {
+  background-color: #59f6e9;
+}
